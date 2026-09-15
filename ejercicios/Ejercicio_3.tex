@@ -4,5 +4,37 @@
     \end{ejercicio}
 
 \begin{demostracion}
+(1) Sea $f: X\to Y$ una función continua. Hagamos 
+\begin{align*}
+    H:X\times I&\to Y\\
+    (x,t)&\mapsto f(x).
+\end{align*}
+Se sigue que $H$ es continua y cumple que $H(x,0)=H(x,1)=f(x)$ para toda $x\in X$. Por lo tanto, $f\simeq f$. (2) Supongamos $f\simeq g,$ entonces existe $H:X\times I\to Y$ continua tal que 
 
+$$H(x,0)=f(x)\text{\; y\; } H(x,1)=g(x).$$
+Hagamos $H_1:X\times I\to Y$ tal que $H_1(x,t)=H(x,1-t)$. Se sigue que $H_1$ es continua y cumple que 
+\begin{align*}
+    H_1(x,0)&=H(x,1)=g(x),\\
+    H_1(x,1)&=H(x,0)=f(x)
+\end{align*}
+para toda $X\in X$. Por lo tanto, $H_1$ es testigo de que $g\simeq f$. (3) Supongamos $f\simeq g$ y $g\simeq h$. Entonces, existen $H_1,H_2:I\times X\to Y$ continuas tales que
+\begin{align*}
+    H_1(x,0)&=f(x),\\
+    H_1(x,1)&=g(x)=H_2(x,0)\text{\; y }\\
+    H_2(x,1)&=h(x).
+\end{align*}
+
+Definamos $H:I\times X\to Y$ tal que
+\begin{equation*}
+    H(x,t)=\begin{cases}
+        H_1(x,2t), & \text{ si } t\in[0,\nicefrac{1}{2}];\\[0.25ex]
+        H_2(x,2t-1) & \text{ si } t\in [\nicefrac{1}{2},1].
+    \end{cases}
+\end{equation*}
+Notemos que $H_1(x,1)=H_2(x,1)=g(x)$, para toda $x\in X$, por el lema del pegado, $H$ es continua. Se sigue que 
+\begin{align*}
+    H(x,0)&=H_1(x,0)=f(x),\\
+    H(x,1)&=H_2(x,1)=h(x)
+\end{align*}
+para toda $x\in X$. Se sigue que $H$ es testigo de que $f\simeq h$.
 \end{demostracion}
