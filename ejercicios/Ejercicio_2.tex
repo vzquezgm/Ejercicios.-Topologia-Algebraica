@@ -7,5 +7,37 @@
 \end{ejercicio}
 
 \begin{demostracion}
-Supongamos 
+(1) Sea $\alpha: I\to X$ un lazo basado en $x_0$. Hagamos 
+\begin{align*}
+    H:I\times I&\to X\\
+    (s,t)&\mapsto \alpha(s).
+\end{align*}
+Se sigue que $H$ es continua y cumple que $H(s,0)=H(s,1)=\alpha(s)$ y $H(0,t)=H(1,t)=\alpha(1)=x_0$ para toda $(s,t)\in I\times I$. Por lo tanto, $\alpha\simeq \alpha$. (2) Supongamos $\alpha\simeq\beta,$ entonces existe $H:I\times I\to X$ continua tal que 
+\begin{enumerate}[label=(\arabic*)]
+    \item $H(s,0)=\alpha(s)$, $H(s,1)=\beta(s)$;
+    \item $H(0,t)=H(1,t)=x_0$.
+\end{enumerate}
+Hagamos $H_1:I\times I\to X$ tal que $H_1(s,t)=H(s,1-t)$. Se sigue que $H_1$ es continua y cumple que 
+\begin{align*}
+    H_1(s,0)&=H(s,1)=\beta(s),\\
+    H_1(s,1)&=H(s,0)=\alpha(s)
+\end{align*}
+para toda $s\in I$ y $H_1(0,t)=H_1(1,t)=H(0,1-t)=H_1(1,1-t)=x_0$ para toda $t\in I$. Por lo tanto, $H_1$ es testigo de que $\beta\simeq \alpha$. (3) Supongamos $\alpha\simeq\beta$ y $\beta\simeq \gamma$. Entonces, existen $H_1,H_2:I\times X$ continuas tales que
+\begin{enumerate}[label=(\arabic*)]
+    \item $H_1(s,0)=\alpha(s)$, $H_1(s,1)=\beta(s)=H_2(s,0)$ y $H_2(s,1)=\gamma(s)$;
+    \item $H_1(0,t)=H_1(1,t)=x_0=H_2(0,t)=H_2(1,t)$.
+\end{enumerate}
+Definamos $H:I\times I\to X$ tal que
+\begin{equation*}
+    H(s,t)=\begin{cases}
+        H_1(s,2t), & \text{ si } t\in[0,\nicefrac{1}{2}];\\[0.25ex]
+        H_2(s,2t-1) & \text{ si } t\in [\nicefrac{1}{2},1].
+    \end{cases}
+\end{equation*}
+Notemos que $H_1(s,1)=H_2(s,1)=\beta(s)$, para toda $s\in I$, por el lema del pegado, $H$ es continua. Se sigue que 
+\begin{align*}
+    H(s,0)&=H_1(s,0)=\alpha(s),\\
+    H(s,1)&=H_2(s,1)=\gamma(s)
+\end{align*}
+para toda $s\in I$ y $H(0,t)=x_0$, para toda $t\in I$. Se sigue que $H$ es testigo de que $\alpha\simeq \gamma$.
 \end{demostracion}
