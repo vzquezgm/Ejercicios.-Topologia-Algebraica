@@ -1,8 +1,8 @@
-\begin{ejercicio}[label=(\arabic*)]
+\begin{ejercicio}
     % ID: 1
     Mostrar que $f_*$ está bien definida y satisface que
-    \begin{itemize}
-        \item [(1)] ${\id_X}_*=\id_{\pi_0(x)}.$
+    \begin{itemize}[label=(\arabic*)]
+        \item [(1)] ${\id_X}_*=\id_{\pi_0(X)}.$
         \item [(2)] Para cualquier $f:X\to Y$ y $g:Y\to Z$ funciones continuas, entonces $(g\circ f)_*=g_*\circ f_*$
     \end{itemize}
 %\begin{dem}
@@ -15,6 +15,12 @@ Supongamos que $x\simeq y$, entonces existe una trayectoría continua $\sigma:I\
 $$f_*(x)=\langle f(x)\rangle=\langle f(y)\rangle=f_*(y),$$
 i.e., $f_*$ está bien definida.
 \begin{enumerate}[label=(\arabic*)]
-    \item Supongamos
+    \item Sea $x\in X$, entonces 
+    \begin{align*}
+        {\id_X}_*(x)&=\langle\id_X(x)\rangle\\
+        &=\langle x\rangle\\
+        &=\id_{\pi_0}(x),
+    \end{align*}
+    por la tanto, ${\id_X}_*=\id_{\pi_0(x)}.$
 \end{enumerate}
 \end{demostracion}
