@@ -4,12 +4,22 @@
     \end{ejercicio}
 
 \begin{demostracion}
-$\Rightarrow)$ Supongamos $X\simeq \{*\}$, entonces existen funciones continuas $f:X\to\sing$ y $g:\sing\to X$ tales que $g\circ f\simeq \id_X$ y $f\circ g\simeq \id_{\sing}.$ Entonces, existen funciones continua $H_1:X\times I\to X$ y $H_2:\sing\times I\to\sing$ tales que 
+$\Rightarrow)$ Supongamos $X\simeq \{*\}$, entonces existen funciones continuas $f:X\to\sing$ y $g:\sing\to X$ tales que $g\circ f\simeq \id_X$. Por lo tanto, existe una función continua $H:X\times I\to X$ tal que
 \begin{align*}
-    H_1(x,0)&=g(f(x))=g(*),\\
-    H_1(x,1)&=\id_X,\\
-    H_2(*,0)&=f(g(*)),\\
-    H_2(*,1)&=\id_{\sing}(*)=*.
+    H(x,0)&=g(f(x))=g(*),\\
+    H(x,1)&=\id_X(x).
 \end{align*}
-   Definamos $H:X\times I\to X$
+Hagamos $x_0=g(*)\in X$, entonces $H(-,0)=c_{x_0}$ y $H(-,1)=\id_X$.
+   
+$\Leftarrow)$ Supongamos existe $H:X\times I\to X$ tal que $H(-,0)=c_{x_0}$ y $H(-,1)=\id_X$, para algún $x_0\in X$. Hagamos $f:X\to\sing$ tal que $f(x)=*$ y $g:\sing\to X$ tal que $g(*)=x_0$. Entonces 
+\begin{align*}
+    H(x,0)&=x_0=g(f(x)),\\
+    H(x,1)&=\id_X(x).
+\end{align*}
+Por lo que $g\circ f\simeq \id_X$. Hagamos ahora $H_1:\sing\times I\to \sing$ tal que $H_1(*,t)=*$. Entonces
+\begin{align*}
+    H_1(*,0)&=*=f(g(*)),\\
+    H_1(*,1)&=*=\id_{\sing}(*).
+\end{align*}
+Se sigue que $f\circ g\simeq\id_{\sing}$, por lo tanto, $f$ y $g$ son testigos de que $X\simeq \sing$.
 \end{demostracion}
