@@ -177,7 +177,7 @@
 
 \usetikzlibrary{decorations.pathmorphing}
 
-
+\newcommand{\rel}{\mathrm{\ rel }\{0,1\}}
 \newcommand{\op}{\mathrm{op}}
 \newcommand{\PX}{\textsf{P\textit{X}}}
 \newcommand{\HTop}{\textsf{HTop}}
@@ -235,7 +235,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\swapnumbers
+%\swapnumbers
 \theoremstyle{plain}
 \newtheorem{teorema}{Teorema}[subsection]
 \newtheorem{lema}[teorema]{Lema}
@@ -258,7 +258,7 @@
 \newtheorem{blueprop}[teorema]{Proposición}
 
 \theoremstyle{estilo-ejemplo-azul}
-\newtheorem{ejercicio}[teorema]{Ejercicio}
+\newtheorem{ejercicio}{Ejercicio}
 
 \theoremstyle{estilo-nota-azul}
 \newtheorem{bluenota}[teorema]{Nota}
@@ -291,7 +291,7 @@
 \pagenumbering{roman}
 \tableofcontents
 \pagenumbering{arabic}
-\include{1.Ejercicios}
+\include{ejercicios}
 %\include{1.Grupo fundamental}
 %\include{2.Topología}
 \include{Referencias}
