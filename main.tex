@@ -10,7 +10,9 @@
 \pagenumbering{roman}
 %\tableofcontents
 \pagenumbering{arabic}
-\include{ejercicios}
+\foreach \i in {1,...,15}{
+    \input{ejercicios/Ejercicio_\i.tex}
+}
 %\include{1.Grupo fundamental}
 %\include{2.Topología}
 %\include{Referencias}
