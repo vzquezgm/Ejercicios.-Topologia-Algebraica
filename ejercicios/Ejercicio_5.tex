@@ -4,5 +4,12 @@
     \end{ejercicio}
 
 \begin{demostracion}
-$\Rightarrow)$ Supongamos $X\simeq \{*\}$, entonces existen funciones continuas $f:X\to\sing$ 
+$\Rightarrow)$ Supongamos $X\simeq \{*\}$, entonces existen funciones continuas $f:X\to\sing$ y $g:\sing\to X$ tales que $g\circ f\simeq \id_X$ y $f\circ g\simeq \id_{\sing}.$ Entonces, existen funciones continua $H_1:X\times I\to X$ y $H_2:\sing\times I\to\sing$ tales que 
+\begin{align*}
+    H_1(x,0)&=g(f(x))=g(*),\\
+    H_1(x,1)&=\id_X,\\
+    H_2(*,0)&=f(g(*)),\\
+    H_2(*,1)&=\id_{\sing}(*)=*.
+\end{align*}
+   Definamos $H:X\times I\to X$
 \end{demostracion}
