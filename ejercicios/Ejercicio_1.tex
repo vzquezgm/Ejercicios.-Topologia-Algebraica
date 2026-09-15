@@ -12,15 +12,24 @@
 
 \begin{demostracion}
 Supongamos que $x\simeq y$, entonces existe una trayectoría continua $\sigma:I\to X$ tal que $\sigma(0)=x$ y $\sigma(1)=y$. Entonces $f\circ \sigma(0)=f(x)$ y $f\circ \sigma(1)=f(y)$. Se sigue que $f\circ \sigma: I\to Y$ es testìgo de que $f(x)\simeq f(y)$, por lo tanto, 
-$$f_*(x)=\langle f(x)\rangle=\langle f(y)\rangle=f_*(y),$$
-i.e., $f_*$ está bien definida.
+$$f_*\langle x\rangle=\langle f(x)\rangle=\langle f(y)\rangle=f_*\langle y\rangle,$$
+i.e., $f_*$ está bien definida. 
+
+Hagamos $x\in X$,
 \begin{enumerate}[label=(\arabic*)]
-    \item Sea $x\in X$, entonces 
+    \item Entonces 
     \begin{align*}
-        {\id_X}_*(x)&=\langle\id_X(x)\rangle\\
-        &=\langle x\rangle\\
-        &=\id_{\pi_0}(x),
+        {\id_X}_*\langle x\rangle &=\langle\id_X(x)\rangle=\langle x\rangle,
     \end{align*}
-    por la tanto, ${\id_X}_*=\id_{\pi_0(x)}.$
+    por la tanto, ${\id_X}_*=\id_{\pi_0(X)}.$
+    \item Por otro lado,
+    \begin{align*}
+        (g\circ f)_*\langle x\rangle
+        &=\langle g\circ f(x)\rangle\\
+        &=\langle g(f(x))\rangle\\
+        &=g_*\langle f(x)\langle\\
+        &=g_*(f_*\langle x\rangle),
+    \end{align*}
+    por lo tanto, $(g\circ f)_*=g_*\circ f_*$.
 \end{enumerate}
 \end{demostracion}
