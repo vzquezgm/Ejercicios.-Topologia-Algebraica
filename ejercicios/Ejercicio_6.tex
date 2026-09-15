@@ -4,5 +4,13 @@
     \end{ejercicio}
 
 \begin{demostracion}
+    Mostremos que, si $A\subseteq \R^n$ convexo, entonces $A$ es contraible.
 
+    Supongamos $A$ es convexo. Sea $x_0\in A$ fijo. Hagamos $H:A\times I\to A$ tal que 
+    \begin{equation*}
+        H(x,t)=tx_0+(1-t)x,
+    \end{equation*}
+    como $A$ es convexo, $H(x,t)\in A$, para toda $(x,t)\in A\times I$, i.e., $A$ contraible.
+
+    Dado que $\R^n$ y $D^n$ son convexos para toda $n>0$, concluimos que son contraibles.
 \end{demostracion}
