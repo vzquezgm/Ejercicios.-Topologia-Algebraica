@@ -4,5 +4,38 @@
     \end{ejercicio}
 
 \begin{demostracion}
+Sea $\epsilon>0$. Hagamos $\delta=\epsilon/2>0$. Sea $(x_1,x_2),(y_1,y_2)\in\R^n\times \R^n$ tal que 
+$$\|(x_1-y_1,x_2-y_2)\|_{n+n}<\delta.$$ 
+Entonces
+\begin{align*}
+    \|x_1-y_1\|_{n}&=\|(x_1-y_1,0_n)\|_{n+n}\\
+    &\leq \|(x_1-y_1,x_2-y_2)\|_{n+n}\\
+    &< \delta.
+\end{align*}
+De manera análoga, $\|x_2-y_2\|_{n}<\delta$. Por lo tanto,
+\begin{align*}
+    \|(x_1+x_2)-(y_1+y_2)\|_{n}&= \|(x_1-y_1)+(x_2-y_2)\|_{n}\\
+    &\leq \|x_1-y_1\|+\|x_2-y_2\|_{n}\\
+    &=\delta+\delta\\
+    &=\epsilon.
+\end{align*}
+Por lo tanto, la suma es uniformemente continua, por lo tanto, continua.
 
+Por otro lado, hagamos $\lambda\in\R$. Sea $\epsilon>0$, existe $\delta=\min\{1,\epsilon/(\|x\|_n+\lambda+1)\}$ tal que si $(\lambda_1,y)\in \R\times\R^n$ y
+$\|(\lambda,x)-(\lambda_1,y)\|_{n+1}<\delta$, entonces 
+$$\|x-y\|_n\leq \|(\lambda-\lambda_1,x-y)\|_{n+1}<\delta.$$
+Además,
+\begin{align*}
+    |\lambda-\lambda_1|\leq \|(\lambda-\lambda_1,x-y)\|_{n+1}<\delta\leq 1,
+\end{align*}
+entonces
+$|\lambda_1|-|\lambda|<|\lambda-\lambda_1|<1$, por lo tanto, $|\lambda_1|<1+|\lambda|.$ Entonces
+\begin{align*}
+    \|\lambda x-\lambda_1 y\|_n&=\|(\lambda x-\lambda_1 x)-(\lambda_1 y-\lambda_1 x)\|_n\\
+    &\leq |\lambda-\lambda_1|\|x\|_n+|\lambda_1|\|x-y\|_n\\
+    &\leq |\lambda-\lambda_1|\|x\|_n+(1+|\lambda|)\|x-y\|_n\\
+    &\leq \delta\|x\|_n+\delta(1+|\lambda|)\\
+    &<\epsilon.
+\end{align*}
+Por lo tanto, la multiplicación por escalar es continua.
 \end{demostracion}
