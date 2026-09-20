@@ -4,19 +4,18 @@
     \end{ejercicio}
 
 \begin{demostracion}
-Sean $G$ un grupo y $g\in G$. Definamos 
+Sean $\alpha,\beta\in \Omega(X,x_0)$. Notemos que $\sigma*\overline{\sigma}=c_{x_0}$, entonces 
 \begin{align*}
-    \Vec{g}:G&\to G\\
-    x&\mapsto g^{-1}xg.
+    [\alpha*\beta]&=[\alpha*c_{x_0}*\beta]\\
+    &=[\alpha*(\sigma*\overline{\sigma})*\beta].
 \end{align*}
- Entonces $\Vec{g}$ es un homomorfismo de grupo. Sea $x,y\in G$, entonces
- \begin{align*}
-     \Vec{g}(xy)&=g^{-1}xyg\\
-     &=g^{-1}xeyg\\
-     &=g^{-1}xgg^{-1}yg\\
-     &=\Vec{g}(x)\Vec{g}(y)
- \end{align*}
-por lo tanto, $\Vec{g}$ es un homomorfismo de grupo. Notemos que 
-$$\Vec{\sigma}[\alpha]=[\overline{\sigma}]*[\alpha]*[{\sigma}], \text{\; para toda } [\alpha]\in\Pi_1(X,x_0).$$ 
-Dado que $\Pi_1(X,x_0)$ es un grupo, se sigue que $\Vec{\sigma}$ es un homomorfismo de grupo. 
+Se sigue que,
+\begin{align*}
+    \Vec{\sigma}\hspace{0.35mm}[\alpha*\beta]&=[\overline{\sigma}*(\alpha*\beta)*\sigma]\\
+    &=[\sigma*(\alpha*(\sigma*\overline{\sigma})*\beta)*\sigma]\\
+    &=[(\overline{\sigma}*\alpha*\sigma)*(\overline{\sigma}*\beta*\sigma)]\\
+    &=[\overline{\sigma}*\alpha*\sigma]*[\overline{\sigma}*\beta*\sigma]\\
+    &=\Vec{\sigma}\hspace{0.35mm}[\alpha]*\Vec{\sigma}\hspace{0.35mm}[\beta].
+\end{align*}
+Por lo tanto, $\Vec{\sigma}$ es un homomorfismo de grupos.
 \end{demostracion}

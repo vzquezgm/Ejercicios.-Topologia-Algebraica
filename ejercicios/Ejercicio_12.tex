@@ -5,7 +5,7 @@
 \end{ejercicio}
 
 \begin{demostracion}
-Sea $\alpha:(I^q,\partial I^q)\to (X,x_0)$ una función continua basada, entonces existe una única función continua $\hat{\alpha}:I^q/\partial I^q\to X$ tal que el siguiente diagrama conmuta
+Sea $\alpha:(I^q,\partial I^q)\to (X,x_0)$ una función continua, entonces existe una única función continua $\hat{\alpha}:I^q/\partial I^q\to X$ tal que el siguiente diagrama conmuta
 \[
 \begin{tikzcd}[column sep=0.65cm, row sep=1cm] 
         I^q\arrow[r,"\alpha"] \arrow[d,"p"'] & X\\
@@ -14,6 +14,15 @@ Sea $\alpha:(I^q,\partial I^q)\to (X,x_0)$ una función continua basada, entonce
 \]
 i.e., $\alpha=\hat{\alpha}\circ p$. Entonces
 \begin{align*}
-    p
+    p_{(X,x_0)}(\p[\alpha])&=p_{(X,x_0)}[\hat{\alpha}]\\
+    &=[\hat{\alpha}\circ \alpha]\\
+    &=[\alpha].
 \end{align*}
+Por otro lado, sea $\gamma:\Iq\to X$, entonces $\hat{\gamma}=\gamma:\Iq\to X$ es la única función continua tal que $\gamma\circ p=\hat{\gamma}\circ p$, por lo tanto,
+\begin{align*}
+    \p(p_{(X,x_0)}[\gamma])&=\p[\gamma\circ p]\\
+    &=[\hat{\gamma}]\\
+    &=[\gamma].
+\end{align*}
+Lo anterior muestra que $p_{(X,x,x_0)}$ y $\p$ son inversas una de la otra.
 \end{demostracion}
