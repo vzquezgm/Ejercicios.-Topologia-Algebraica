@@ -4,5 +4,27 @@
     \end{ejercicio}
 
 \begin{demostracion}
-
+Los objetos en $\HTop$ son la clase de todos los espacios topológicos y los morfismos en $\HTop$ las clases de equivalencia de funciones homotópicas. Sean $[f]:X\to Y$ y $[h]:Y\to X$ mor- fismos en $\HTop$. Definimos
+\[
+[g]\circ [f]=[g\circ f].
+\]
+Notemos que si $f\simeq g:X\to Y$ y $h\simeq k:Y\to Z,$ entonces $h\circ f\simeq k\circ g.$ Por lo tanto,
+\begin{align*}
+    [h]\circ [f]&=[h\circ f]\\
+    &=[k\circ g]\\
+    &=[k]\circ [g],
+\end{align*}
+i.e., la composición está bien definida. Mostremos que la composición es asociativa. Sea $[f]:X\to Y$, $[g]:Y\to Z$ Y $[h]:Z\to W$ morfismos en $\HTop$. Entonces
+\begin{align*}
+    [h]\circ([g]\circ[f])&=[h]\circ [g\circ f]\\
+    &=[h\circ (g\circ f)]\\
+    &=[(h\circ g)\circ f]\\
+    &=[h\circ g]\circ [f]\\
+    &=([h]\circ [g])\circ [f].
+\end{align*}
+Finalmente, para cualquier morfismo $[f]:X\to Y$, se tiene que
+\begin{equation*}
+    [f]\circ [\id_X]=[f\circ\id_X]=[f].
+\end{equation*}
+De manera análoga, $[\id_Y]\circ [f]=[f]$.
 \end{demostracion}

@@ -4,5 +4,11 @@
 \end{ejercicio}
 
 \begin{demostracion}
-
+Supongamos $f:A\to B$ es un isomorfismo en $\C$, entonces existe un único morfismo $f^{-1}:B\to A$ tal que $f\circ f^{-1}=\id_B$ y $f^{-1}\circ f=\id_A$. Entonces
+\begin{align*}
+    F(f)\circ F(f^{-1})&=F(f\circ f^{-1})\\
+    &=F(\id_B)\\
+    &=\id_{F(B)}.
+\end{align*}
+De manera similar, $F(f^{-1})\circ F(f)=\id_{F(A)}$, por lo tanto, $F(f)$ es un isomorfismo.
 \end{demostracion}
