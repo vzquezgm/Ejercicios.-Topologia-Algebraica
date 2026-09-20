@@ -9,5 +9,42 @@
     \end{ejercicio}
 
 \begin{demostracion}
-
+\begin{enumerate}[label=(\arabic*)]
+    \item Si $\sigma\simeq \tau$, entonces $[\sigma]=[\tau]$. Como el inverso en el grupo $\Pi_1(X,x_1)$ es único, se tiene que $[\overline{\sigma}]=[\overline{\tau}],$ entonces $\overline{\sigma}\simeq\overline{\tau}$. Se sigue que, para toda $\alpha\in\Omega_1(X,x_0)$
+    \begin{equation*}
+        \alpha*\sigma\simeq \alpha*\tau\Rightarrow
+        \overline{\sigma}*\alpha*\sigma\cong \overline{\tau}*\alpha*\tau.
+    \end{equation*}
+    Por lo tanto,
+    \begin{align*}
+        \Vec{\sigma}\hspace{0.3mm}[\alpha]&=[\overline{\sigma}*\alpha*\sigma]\\
+        &=[\overline{\tau}*\alpha*\tau]\\
+        &=\Vec{\tau}\hspace{0.4mm}[\alpha],
+    \end{align*}
+    i.e., $\Vec{\sigma}=\Vec{\tau}.$
+    \item Dado que $[c_{x_0}]$ es el elemento neutro en $\Pi_1(X,x_0)$, se sigue que $[c_{x_0}]=[\overline{c}_{x_0}]$, por lo tanto,
+    \begin{align*}
+        \Vec{c}_{x_0}[\alpha]&=[\overline{c}_{x_0}*\alpha*c_{x_0}]\\
+        &=[\overline{c}_{x_0}]*[\alpha]*[c_{x_0}]\\
+        &=[\alpha].
+    \end{align*}
+    Lo anterior muestra que $\Vec{c}_{x_0}=\id_{\Pi_1(X,x_0)}.$
+    \item Sea $[\alpha]\in \Pi_1(X,x_0)$. Entonces
+    \begin{align*}
+        \overrightarrow{\sigma_0*\sigma_1}[\alpha]&=[\overline{\sigma_0*\sigma_1}*\alpha*(\sigma_0*\sigma_1)]
+    \end{align*}
+    Dado que $\Pi_1(X,x_0)$ es un grupo y $[\overline{\sigma_0*\sigma_1}]$ es el inverso de $[\sigma_0*\sigma_1]=[\sigma_0]*[\sigma_1],$ se sigue que 
+    \begin{equation*}
+        [\overline{\sigma_0*\sigma_1}]=[\overline{\sigma}_1]*[\overline{\sigma}_0]=
+        [\overline{\sigma}_1*\overline{\sigma}_0].
+    \end{equation*}
+    Se sigue que $\overline{\sigma_0*\sigma_1}*\alpha\simeq (\overline{\sigma}_1*\overline{\sigma}_0)*\alpha$, por lo tanto,
+    \begin{align*}
+        \overrightarrow{\sigma_0*\sigma_1}[\alpha]&=[(\overline{\sigma}_1*\overline{\sigma}_0)*\alpha*(\sigma_0*\sigma_1)]\\
+        &=[\overline{\sigma}_1*(\overline{\sigma}_0*\alpha*\sigma_0)*\sigma_1)]\\
+        &=[\overline{\sigma}_1*(\Vec{\sigma}_0[\alpha])*\sigma_1)]\\
+        &=\Vec{\sigma}_1(\Vec{\sigma}_0[\alpha])
+    \end{align*}
+    De lo anterior, concluimos que $\overrightarrow{\sigma_0*\sigma_1}=\Vec{\sigma}_1\circ \Vec{\sigma}_0$.
+\end{enumerate}
 \end{demostracion}
