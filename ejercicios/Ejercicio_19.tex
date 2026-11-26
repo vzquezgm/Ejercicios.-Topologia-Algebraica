@@ -4,5 +4,13 @@
 \end{ejercicio}
 
 \begin{demostracion}
-
+    Queremos mostrar que $\Phi(f\circ p)(x)$ es un lazo basado en $y_0$ para toda $x\in X$. Por definición
+    \begin{align*}
+        \Phi(f\circ p)(x)(t)&=(f\circ p)(x,t)\\
+        &=f[x,t]
+    \end{align*}
+    Como $(x,0),(x,1)\in (X\times \partial I)\cup (\{x_0\}\times I)$, entonces $[x,0]=[x,1]=*$, como $f$ es basada, se sigue que
+    \begin{equation*}
+        f[x,0]=f[x,1]=f(*)=y_0
+    \end{equation*}
 \end{demostracion}

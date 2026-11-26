@@ -4,5 +4,14 @@
 \end{ejercicio}
 
 \begin{demostracion}
-
+Recordemos que la función evaluación está definida como sigue 
+\begin{align*}
+        ev:\map(Z,Y)\times Z&\to Y\\
+        (f,z)&\mapsto f(z)
+    \end{align*}
+Sea $U$ un abierto en $Y$ y $(f,z)\in\map(Z,Y)\times Z$ tal que $f(z)=ev(f,z)\in U$. Como $f$ es una función continua, $f^{-1}(U)$ es una vecindad abierta de $z\in Z$. Como $Z$ es localmente compacto, existe una vecindad compacta $K$ tal que $z\in\interior(K)\subseteq K\subseteq f^{-1}(U)$, entonces $f(z)\in f(K)\subseteq U$. Hagamos $V=\interior(K)$ y $W=\{g\in\map(Z,Y):g(K)\subseteq U\}$, entonces $V$ es abierto en $Z$ y $W$ es abierto subbásico en $\map(Z,Y)$. Se sigue que $W\times U$ es abierto en $\map(Z,Y)\times Z$. Sea $(g,y)\in W\times V$, entonces $y\in V\subseteq K$, por definición de $W$, se sigue que $ev(g,y)=g(y)\in U$, por lo tanto,
+\[
+W\times V\subseteq ev^{-1}(U)
+\]
+Además, como $f(K)\subseteq U$ y $z\in V$, entonces $(f,z)\in W\times V\subseteq ev^{-1}(U)$. Por lo tanto, $ev^{-1}(U)$ es abierto. Esto prueba que $ev$ es continua.
 \end{demostracion}
