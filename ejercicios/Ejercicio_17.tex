@@ -4,5 +4,22 @@
 \end{ejercicio}
 
 \begin{demostracion}
+    Recordemos que $\Phi$ esta definida como sigue: \begin{equation*}
+        \Phi:\text{Fun}(X\times Z,Y)\to\text{Fun}(X,\text{Fun}(Z,Y))
+    \end{equation*}
+    tal que $\Phi(F)(x)(z)=F(x,z)$. Hagamos 
+    \begin{equation*}
+        \Psi:\text{Fun}(X,\text{Fun}(Z,Y))\to \text{Fun}(X\times Z,Y)
+    \end{equation*}
+    tal que $\Psi(f):X\times Z\to Y$ definida como $\Psi(f)(x,z)=f(x)(z)$. Mostremos que $\Psi$ es la inversa de $\Phi$. Notemos primero que 
+    \begin{align*}
+        \Psi(\Phi(F))(x,y)&=\Phi(F)(x)(z)=F(x,z)
+    \end{align*}
+    i.e., $ \Psi(\Phi(F))=F$. Por otro lado, tenemos que 
+    \begin{equation*}
+        \Phi(\Psi(f))(x)(z)=\Psi(f)(x,z)=f(x)(z)
+    \end{equation*}
+    para toda $z\in Z$, entonces $\Phi(\Psi(f))(x)=f(x)$ para toda $x\in X$. Por lo tanto $\Phi(\Psi)(f)=f$.
 
+    Lo anterior muestra que $\Phi$ es una biyección con inversa $\Psi$.
 \end{demostracion}
