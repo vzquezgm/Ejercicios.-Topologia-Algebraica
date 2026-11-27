@@ -4,13 +4,57 @@
 \end{ejercicio}
 
 \begin{demostracion}
-    Queremos mostrar que $\Phi(f\circ p)(x)$ es un lazo basado en $y_0$ para toda $x\in X$. Por definición
+    Recordemos que $\Phi_1:\map(X\times I,Y)\to\map(X,\map(I,Y))$ induce la función 
+    \begin{equation*}
+    \Phi:\map((SX,*),(Y,y_0))\to \map((X,x_0),(\Omega(Y,y_0),c_{y_0}))
+\end{equation*}
+tal que $\Phi(f)=\Phi_1(f\circ p)$.
+    
+    Queremos mostrar que $\Phi_1(f\circ p)(x)$ es un lazo basada en $y_0$ para toda $x\in X$. Por definición
     \begin{align*}
         \Phi(f\circ p)(x)(t)&=(f\circ p)(x,t)\\
         &=f[x,t]
     \end{align*}
     Como $(x,0),(x,1)\in (X\times \partial I)\cup (\{x_0\}\times I)$, entonces $[x,0]=[x,1]=*$, como $f$ es basada, se sigue que
     \begin{equation*}
-        f[x,0]=f[x,1]=f(*)=y_0
+        f[x,0]=f[x,1]=f(*)=y_0.
     \end{equation*}
+    Finalmente, como $\Phi_1(f\circ p)(x)$ es continua, se sigue que $\Phi_1(f \circ p)(x)$ es un lazo. Además 
+    \begin{equation*}
+        \Phi(f\circ p)(x_0)(t)=f[x_0,t]=f(*)=y_0
+    \end{equation*}
+    por lo tanto, $\Phi_1(f\circ p)(x_0)=c_{y_0}$, i.e., $\Phi$ está bien definida.
+    
+    Mostremos ahora que $\Phi$ es una biyección. Tomemos 
+    $$g\in \map((X,x_0),(\Omega(Y,y_0),c_{y_0}))\subseteq \map(X,\map(I, Y))$$
+    Como $I$ localmente compacto Hausdorff, existe la inversa de $\Phi_1$, entonces $G=\Phi^{-1}_1(g):X\times I\to Y$ es continua tal que $G(x,t)=g(x)(t)$ (por definición de $\Phi_1^{-1}$). Sea $(x,t)\in X\times \partial I$, como $g(x)\in \Omega(Y,y_0)$, entonces
+    \begin{equation*}
+        G(x,t)=g(x)(t)=y_0
+    \end{equation*}
+    Por otro lado,como $g(x_0)=c_{y_0}$, entonces
+        \begin{equation*}
+        G(x_0,t)=g(x_0)(t)=y_0, \text{ para todo } t\in I.
+    \end{equation*}
+    entonces $G$ pasa al cociente, i.e., existe una única función continua $\overline{G}:SX\to Y$ tal que $\overline{G}\circ p=G$. Mostremos que $\overline{G}$ es basado en $*$. Notemos que $p(x_0,t)=*$, entonces
+    \begin{equation*}
+        \overline{G}(*)=\overline{G}(p(x_0,t))=G(x_0,t)=y_0.
+    \end{equation*}
+    Por lo anterior, podemos definir  
+    \begin{align*}
+        \Psi:\map((X,x_0),(\Omega(Y,y_0),c_{y_0}))&\to \map((SX,*),(Y,y_0))\\
+        g&\mapsto \overline{G}=\overline{\Phi_1^{-1}(g)}
+    \end{align*}
+    Mostremos que $\Psi$ es la inversa de $\Phi$. Por definición $\Psi(\Phi(f))$ es la única función continua $\overline{F}:SX\to Y$ tal que $\overline{F}\circ p=F$, donde $F=\Phi_1^{-1}(\Phi_1(f\circ p))=f\circ p$, por la unicidad de $\overline{F}$, se sigue que 
+    \begin{equation*}
+        \Psi(\Phi(f))=\overline{F}=f
+    \end{equation*}
+    Por otro lado,
+    \begin{align*}
+        \Phi(\Psi(g))&=\Phi_1(\Psi(g)\circ p)\\
+        &=\Phi_1(\overline{G}\circ p)\\
+        &=\Phi_1(G)\\
+        &=\Phi_1(\Phi_1^{-1}(g))\\
+        &=g.
+    \end{align*}
+    Lo anterior muestra que $\Phi$ es una biyección con inversa $\Psi$.
 \end{demostracion}

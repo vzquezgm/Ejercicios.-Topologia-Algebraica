@@ -12,5 +12,73 @@
 \end{ejercicio}
 
 \begin{demostracion}
+Hagamos
+\begin{align*}
+    \rho_1:&\map((SX,*),(Y,y_0))\to [(SX,*),(Y,y_0)],\\
+    \rho_2:&\map((X,x_0),(\Omega(Y,y_0),c_{y_0}))\to [(X,x_0),(\Omega(Y,y_0),c_{y_0})]
+\end{align*}
+las proyecciones naturales al cociente.
 
+Mostremos primero que $\rho_2\circ \Phi$ pasa al cociente. Supongamos $f,g\in \map((SX,*),(Y,y_0))$ tales que $f\simeq g$, i.e., existe una homotopía basada $F:SX\times I\to Y$ tal que $F([x,s],0)=f[x,s]$, $F([x,s],1)=g[x,s]$ y $F(*,t)=y_0$ para toda $t\in I$. Sea $p:X\times I\to SX$ la proyección natural al cociente y consideremos la composición continua $H=F\circ (p\times \id_I):(X\times I)\times I\to Y$, la cual satisface
+\begin{align*}
+    H((x,s),0)&=f[x,s],\\
+    H((x,s),1)&=g[x,s],
+\end{align*}
+y $H((x,s),t)=y_0$, para toda $(x,s)\in A=(X\times \partial I)\cup (\{x_0\}\times I)$ y toda $t\in I$.
+
+Definamos la función continua $K:(X\times I)\times I\to Y$ dada por $K((x,t),s)=H((x,s),t)$ (intercambiando las dos coordenadas de $I$). Aplicando $\Phi_1$, obtenemos la función continua
+\[
+    \overline{H}=\Phi_1(K):X\times I\to \map(I,Y),
+\]
+dada por $\overline{H}(x,t)(s)=K((x,t),s)=H((x,s),t)$. Notemos que para cualesquiera $(x,t)\in X\times I$ y $s\in \partial I$, como $(x,s)\in X\times \partial I\subseteq A$, se tiene
+\[
+    \overline{H}(x,t)(s)=H((x,s),t)=y_0,
+\]
+de modo que $\overline{H}(x,t)\in \Omega(Y,y_0)$. Restringiendo el codominio, $\overline{H}:X\times I\to \Omega(Y,y_0)$ es continua y cumple que
+\begin{align*}
+    \overline{H}(x,0)(s)&=H((x,s),0)=f[x,s]=\Phi(f)(x)(s),\\
+    \overline{H}(x,1)(s)&=H((x,s),1)=g[x,s]=\Phi(g)(x)(s).
+\end{align*}
+Entonces $\overline{H}(x,0)=\Phi(f)(x)$ y $\overline{H}(x,1)=\Phi(g)(x)$. Mostremos que $\overline{H}$ es basada en $x_0$. Tomemos $t,s\in I$; como $(x_0,s)\in \{x_0\}\times I\subseteq A$, entonces
+\begin{align*}
+    \overline{H}(x_0,t)(s)&=H((x_0,s),t)=y_0.
+\end{align*}
+Se sigue que $\overline{H}(x_0,t)=c_{y_0}$. Por lo tanto, $\overline{H}$ es testigo de que $\Phi(f)\simeq \Phi(g)$, i.e., $\rho_2(\Phi(f))=\rho_2(\Phi(g))$. Entonces existe una única función
+\[
+    \overline{\Phi}:[(SX,*),(Y,y_0)] \to [(X,x_0),(\Omega(Y,y_0),c_{y_0})]
+\]
+tal que $\overline{\Phi}\circ \rho_1=\rho_2\circ \Phi$ (dada por $\overline{\Phi}[f]=[\Phi(f)]$).
+
+Como $\Phi$ y $\rho_2$ son sobreyectivas, entonces $\rho_2\circ\Phi=\overline{\Phi}\circ\rho_1$ es sobreyectiva, y por lo tanto $\overline{\Phi}$ es sobreyectiva.
+
+Mostremos que $\overline{\Phi}$ es inyectiva. Sean $f,g\in \map((SX,*),(Y,y_0))$ tales que $\overline{\Phi}[f]=\overline{\Phi}[g]$; entonces $[\Phi(f)]=[\Phi(g)]$, i.e., $\Phi(f)\simeq \Phi(g)$. Por lo tanto, existe una homotopía continua $H:X\times I\to \Omega(Y,y_0)\subseteq \map(I,Y)$ tal que
+\begin{align*}
+    H(x,0)&=\Phi(f)(x),\\
+    H(x,1)&=\Phi(g)(x),\\
+    H(x_0,t)&=c_{y_0}, \quad \text{para toda } t\in I.
+\end{align*}
+
+Como $I$ es localmente compacto (Hausdorff), $\Phi_1:\map((X\times I)\times I,Y)\to \map(X\times I,\map(I,Y))$ es biyectiva, por lo que existe una función continua $K=\Phi_1^{-1}(H):(X\times I)\times I\to Y$ tal que $K((x,t),s)=H(x,t)(s)$. Definamos ahora la función continua $K':(X\times I)\times I\to Y$ por $K'((x,s),t)=K((x,t),s)=H(x,t)(s)$.
+
+Veamos que $K'$ es constante en las fibras de $p\times \id_I:(X\times I)\times I\to SX\times I$. Para cualquier $t\in I$:
+\begin{itemize}
+    \item si $(x,s)\in X\times \partial I$, como $H(x,t)\in \Omega(Y,y_0)$, se tiene $K'((x,s),t)=H(x,t)(s)=y_0$;
+    \item si $(x_0,s)\in \{x_0\}\times I$, como $H(x_0,t)=c_{y_0}$, se tiene $K'((x_0,s),t)=H(x_0,t)(s)=c_{y_0}(s)=y_0$.
+\end{itemize}
+Así, $K'$ es constante con valor $y_0$ en $A\times I$ (y por tanto en cada fibra de $p\times \id_I$). Como $p:X\times I\to SX$ es cociente e $I$ es localmente compacto, la función $p\times \id_I:(X\times I)\times I\to SX\times I$ es cociente; por la propiedad universal del cociente, existe una única función continua $\tilde{H}:SX\times I\to Y$ tal que $\tilde{H}\circ (p\times \id_I)=K'$, i.e., $\tilde{H}([x,s],t)=H(x,t)(s)$.
+
+Verifiquemos que $\tilde{H}$ es una homotopía basada entre $f$ y $g$. Tenemos
+\begin{align*}
+    \tilde{H}([x,s],0)&=H(x,0)(s)\\
+    &=\Phi(f)(x)(s)\\
+    &=f[x,s].
+\end{align*}
+De manera análoga, $\tilde{H}([x,s],1)=g[x,s]$. Finalmente, sea $t\in I$; como $p(x_0,0)=*$, se tiene
+\begin{align*}
+    \tilde{H}(*,t)&=\tilde{H}([x_0,0],t)\\
+    &=H(x_0,t)(0)\\
+    &=c_{y_0}(0)\\
+    &=y_0.
+\end{align*}
+Lo anterior muestra que $f\simeq g$, i.e., $[f]=[g]$, por lo que $\overline{\Phi}$ es inyectiva. Además, $\overline{\Phi}[c_{y_0}]=[\Phi(c_{y_0})]=[c_{c_{y_0}}]$, luego $\overline{\Phi}$ es una biyección.
 \end{demostracion}
